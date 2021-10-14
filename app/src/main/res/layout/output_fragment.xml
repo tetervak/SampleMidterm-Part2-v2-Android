@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.OutputFragment">
+
+    <data>
+        <variable
+            name="mainViewModel"
+            type="ca.tetervak.samplemidtermpart2v2.MainViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/breed_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:labelFor="@id/breed_input"
+                    android:text="@string/breed_label"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textStyle="bold"
+                    tools:ignore="RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/breed_output"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:text="@{mainViewModel.breedInfo.breedName}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    tools:text="Domestic" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin">
+
+                <TextView
+                    android:id="@+id/hair_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:labelFor="@id/hair_input"
+                    android:text="@string/hair_label"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textStyle="bold"
+                    tools:ignore="RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/hair_output"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:text="@{mainViewModel.breedInfo.hairLength}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    tools:ignore="RtlHardcoded"
+                    tools:text="Short Hair" />
+            </TableRow>
+
+        </TableLayout>
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/double_margin"
+            android:text="@string/button_back" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+</layout>

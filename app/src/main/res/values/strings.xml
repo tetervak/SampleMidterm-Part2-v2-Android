@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Midterm v2</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- menu items -->
+    <string name="menu_about">About</string>
+
+    <!-- about dialog -->
+    <string name="about">About</string>
+    <string name="author">Alex Tetervak, Sheridan College, 2021</string>
+
+    <!-- input/output labels -->
+    <string name="breed_label">Breed</string>
+    <string name="hair_label">Hair</string>
+
+    <!-- button labels -->
+    <string name="button_submit">Submit</string>
+    <string name="button_back">Back</string>
+
+    <!-- default text input -->
+    <string name="default_cat_breed">Cat Breed</string>
+
+    <!-- default output -->
+    <string name="undefined">Undefined</string>
+
+    <!-- validation error -->
+    <string name="error_required">required</string>
+
+    <!-- the fragment labels -->
+    <string name="fragment_output">Output</string>
+    <string name="fragment_input">Input</string>
+    <string name="fragment_about">About</string>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_input">
+    <fragment
+        android:id="@+id/nav_input"
+        android:name="ca.tetervak.samplemidtermpart2v2.ui.InputFragment"
+        android:label="@string/fragment_input"
+        tools:layout="@layout/input_fragment">
+        <action
+            android:id="@+id/action_input_to_output"
+            app:destination="@id/nav_output" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_output"
+        android:name="ca.tetervak.samplemidtermpart2v2.ui.OutputFragment"
+        android:label="@string/fragment_output"
+        tools:layout="@layout/output_fragment">
+        <action
+            android:id="@+id/action_output_to_input"
+            app:destination="@id/nav_input"
+            app:popUpTo="@id/nav_input"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <dialog
+        android:id="@+id/nav_about"
+        android:name="ca.tetervak.samplemidtermpart2v2.ui.AboutDialog"
+        android:label="@string/fragment_about" />
+    <action android:id="@+id/action_global_about" app:destination="@id/nav_about" />
+</navigation>
